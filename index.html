@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#071422" />
+  <meta name="description" content="Ular Tangga 3D Bahasa Arab" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <title>Ular Tangga 3D Bahasa Arab</title>
+</head>
+<body>
+  <div id="portal-status" role="status" aria-live="polite"></div>
+  <div id="app">
+    <header class="topbar">
+      <section class="player-card" id="player-card-0">
+        <span class="avatar blue">A</span>
+        <div><strong id="player-name-0">Player A</strong><small>Petak <b id="player-pos-0">0</b>/50 · Skor <b id="player-score-0">0</b> · Akurasi <b id="player-acc-0">–</b></small></div>
+      </section>
+      <section class="title-card">
+        <span class="engine-chip">PLAYCANVAS ENGINE</span>
+        <h1>ULAR TANGGA 3D • BAHASA ARAB</h1>
+        <span id="zone-pill">Mulai dari petak awal</span>
+      </section>
+      <section class="player-card red-side" id="player-card-1">
+        <span class="avatar red">B</span>
+        <div><strong id="player-name-1">Player B</strong><small>Petak <b id="player-pos-1">0</b>/50 · Skor <b id="player-score-1">0</b> · Akurasi <b id="player-acc-1">–</b></small></div>
+      </section>
+    </header>
+
+    <main class="game-grid">
+      <section class="scene-panel">
+        <div class="scene-badge">5 ular • 5 tangga • 5 bonus • ubin bertingkat dari 1 ke 50 • soal acak tanpa pengulangan antarpemain</div>
+        <canvas id="renderCanvas" aria-label="Papan Ular Tangga 3D PlayCanvas"></canvas>
+        <div id="tile-label-layer" aria-hidden="true"></div>
+        <div class="scene-vignette" aria-hidden="true"></div>
+      </section>
+
+      <aside class="side-panel">
+        <section class="panel zone-panel">
+          <h2>Zona Materi</h2>
+          <p><i class="swatch ped"></i>1–10 · Mufradat</p>
+          <p><i class="swatch pro"></i>11–20 · Profesi</p>
+          <p><i class="swatch kep"></i>21–30 · Qawaid</p>
+          <p><i class="swatch sos"></i>31–40 · Muhadatsah</p>
+          <p><i class="swatch int"></i>41–50 · Qira’ah</p>
+        </section>
+        <section class="panel control-panel">
+          <small>Giliran</small><h2 id="turn-name">PLAYER A</h2>
+          <div class="dice-result">🎲 <strong id="dice-value">–</strong></div>
+          <button id="roll-btn" class="primary" disabled>Lempar Dadu</button>
+          <button id="camera-btn">Sudut Kamera</button>
+          <div class="camera-hint">Drag = orbit · Scroll = zoom</div>
+          <div class="question-count" id="question-count">Soal unik terpakai: 0 / 50</div>
+        </section>
+        <section class="panel log-panel"><h2>Log Permainan</h2><div id="log-list"><div>Papan siap. Mulai pertandingan untuk bermain.</div></div></section>
+      </aside>
+    </main>
+  </div>
+
+  <div class="overlay" id="start-overlay">
+    <div class="start-card">
+      <span class="eyebrow">Game Edukasi · 1 vs 1 · PlayCanvas Engine + Vite + TypeScript</span>
+      <h2>Ular Tangga 3D — Bahasa Arab</h2>
+      <p>Petak 1–10 Mufradat, 11–20 Profesi, 21–30 Qawaid, 31–40 Muhadatsah, dan 41–50 Qira’ah. Terdapat 5 ular, 5 tangga, 5 bonus, serta Final Challenge di petak 50.</p>
+      <div class="name-grid">
+        <label>Nama Player A<input id="name-a" value="Player A" maxlength="24"></label>
+        <label>Nama Player B<input id="name-b" value="Player B" maxlength="24"></label>
+      </div>
+      <div class="material-grid">
+        <label>Material pion Player A
+          <select id="material-a">
+            <option value="glossy">Glossy Plastic</option>
+            <option value="metallic">Metallic</option>
+            <option value="matte">Matte</option>
+            <option value="marble">Marble</option>
+          </select>
+        </label>
+        <label>Material pion Player B
+          <select id="material-b">
+            <option value="metallic">Metallic</option>
+            <option value="glossy">Glossy Plastic</option>
+            <option value="matte">Matte</option>
+            <option value="marble">Marble</option>
+          </select>
+        </label>
+      </div>
+      <div class="feature-strip">
+        <span>🐍 Ular animated</span><span>🪜 Tangga 3D</span><span>✨ Final beacon</span><span>🎥 Kamera mendaki</span>
+      </div>
+      <button id="start-btn" class="primary">Mulai Pertandingan</button>
+    </div>
+  </div>
+
+  <div class="overlay hidden" id="question-overlay"><div class="question-card" id="question-card"></div></div>
+  <div class="overlay hidden" id="win-overlay"><div class="win-card" id="win-card"></div></div>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
+<!-- Portal akun ditambahkan dari src/main.ts. -->

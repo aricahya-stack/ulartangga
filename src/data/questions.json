@@ -1,0 +1,911 @@
+[
+  {
+    "id": "ARB-01",
+    "competency": "Pedagogik",
+    "type": "mcq",
+    "title": "Kosakata benda kelas",
+    "stimulus": "Perhatikan kata Arab berikut: كِتَابٌ",
+    "prompt": "Arti kata كِتَابٌ adalah ....",
+    "options": [
+      "Buku",
+      "Meja",
+      "Papan tulis",
+      "Tas"
+    ],
+    "answer": 0,
+    "explanation": "كِتَابٌ (kitābun) berarti buku."
+  },
+  {
+    "id": "ARB-02",
+    "competency": "Pedagogik",
+    "type": "mcq",
+    "title": "Kosakata sekolah",
+    "stimulus": "Perhatikan kata: مَدْرَسَةٌ",
+    "prompt": "Makna مَدْرَسَةٌ adalah ....",
+    "options": [
+      "Rumah",
+      "Sekolah",
+      "Pasar",
+      "Masjid"
+    ],
+    "answer": 1,
+    "explanation": "مَدْرَسَةٌ (madrasatun) berarti sekolah."
+  },
+  {
+    "id": "ARB-03",
+    "competency": "Pedagogik",
+    "type": "mcq",
+    "title": "Kosakata warna",
+    "stimulus": "Ali melihat tas berwarna أَحْمَرُ.",
+    "prompt": "Warna أَحْمَرُ berarti ....",
+    "options": [
+      "Hijau",
+      "Biru",
+      "Merah",
+      "Kuning"
+    ],
+    "answer": 2,
+    "explanation": "أَحْمَرُ (aḥmaru) berarti merah."
+  },
+  {
+    "id": "ARB-04",
+    "competency": "Pedagogik",
+    "type": "mcq",
+    "title": "Kosakata angka",
+    "stimulus": "Bilangan Arab: خَمْسَةٌ",
+    "prompt": "Angka yang sesuai dengan خَمْسَةٌ adalah ....",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "answer": 2,
+    "explanation": "خَمْسَةٌ (khamsatun) berarti lima."
+  },
+  {
+    "id": "ARB-05",
+    "competency": "Pedagogik",
+    "type": "tf",
+    "title": "Makna قلم",
+    "stimulus": "قَلَمٌ adalah salah satu benda yang biasa digunakan siswa untuk menulis.",
+    "prompt": "Pernyataan: قَلَمٌ berarti pena atau pulpen.",
+    "answer": true,
+    "explanation": "Benar. قَلَمٌ (qalamun) berarti pena/pulpen."
+  },
+  {
+    "id": "ARB-06",
+    "competency": "Pedagogik",
+    "type": "tf",
+    "title": "Makna كرسي",
+    "stimulus": "Perhatikan kata كُرْسِيٌّ.",
+    "prompt": "Pernyataan: كُرْسِيٌّ berarti meja.",
+    "answer": false,
+    "explanation": "Salah. كُرْسِيٌّ berarti kursi, sedangkan meja adalah مَكْتَبٌ."
+  },
+  {
+    "id": "ARB-07",
+    "competency": "Pedagogik",
+    "type": "match",
+    "title": "Jodohkan benda kelas",
+    "stimulus": "Pasangkan kosakata Arab dengan arti Indonesianya.",
+    "prompt": "Jodohkan setiap kata dengan arti yang tepat.",
+    "pairs": [
+      {
+        "left": "كِتَابٌ",
+        "right": "Buku"
+      },
+      {
+        "left": "قَلَمٌ",
+        "right": "Pulpen"
+      },
+      {
+        "left": "كُرْسِيٌّ",
+        "right": "Kursi"
+      },
+      {
+        "left": "سَبُّورَةٌ",
+        "right": "Papan tulis"
+      }
+    ],
+    "explanation": "Keempat kata tersebut merupakan kosakata benda yang umum dijumpai di kelas."
+  },
+  {
+    "id": "ARB-08",
+    "competency": "Pedagogik",
+    "type": "match",
+    "title": "Jodohkan warna",
+    "stimulus": "Pasangkan nama warna dalam bahasa Arab dengan artinya.",
+    "prompt": "Jodohkan dengan benar.",
+    "pairs": [
+      {
+        "left": "أَحْمَرُ",
+        "right": "Merah"
+      },
+      {
+        "left": "أَزْرَقُ",
+        "right": "Biru"
+      },
+      {
+        "left": "أَخْضَرُ",
+        "right": "Hijau"
+      },
+      {
+        "left": "أَصْفَرُ",
+        "right": "Kuning"
+      }
+    ],
+    "explanation": "أحمر merah, أزرق biru, أخضر hijau, dan أصفر kuning."
+  },
+  {
+    "id": "ARB-09",
+    "competency": "Pedagogik",
+    "type": "multi",
+    "title": "Benda di kelas",
+    "stimulus": "Pilih kata-kata yang termasuk benda yang biasa ada di kelas.",
+    "prompt": "Pilih semua jawaban yang benar.",
+    "options": [
+      "كِتَابٌ",
+      "قَلَمٌ",
+      "سَبُّورَةٌ",
+      "سَيَّارَةٌ",
+      "كُرْسِيٌّ"
+    ],
+    "answer": [
+      0,
+      1,
+      2,
+      4
+    ],
+    "explanation": "Buku, pulpen, papan tulis, dan kursi merupakan benda kelas; سَيَّارَةٌ berarti mobil."
+  },
+  {
+    "id": "ARB-10",
+    "competency": "Pedagogik",
+    "type": "multi",
+    "title": "Kosakata tempat belajar",
+    "stimulus": "Pilih kosakata yang berhubungan dengan lingkungan sekolah.",
+    "prompt": "Pilih semua jawaban yang sesuai.",
+    "options": [
+      "مَدْرَسَةٌ",
+      "فَصْلٌ",
+      "مَكْتَبَةٌ",
+      "مُعَلِّمٌ",
+      "مَطَارٌ"
+    ],
+    "answer": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explanation": "Sekolah, kelas, perpustakaan, dan guru berkaitan dengan lingkungan belajar; مَطَارٌ berarti bandara."
+  },
+  {
+    "id": "ARB-11",
+    "competency": "Profesional",
+    "type": "mcq",
+    "title": "Profesi guru",
+    "stimulus": "هٰذَا أَحْمَدُ. هُوَ يُعَلِّمُ الطُّلَّابَ فِي الْمَدْرَسَةِ.",
+    "prompt": "Profesi Ahmad adalah ....",
+    "options": [
+      "طَبِيبٌ",
+      "مُعَلِّمٌ",
+      "شُرْطِيٌّ",
+      "فَلَّاحٌ"
+    ],
+    "answer": 1,
+    "explanation": "Orang yang mengajar siswa di sekolah adalah مُعَلِّمٌ, yaitu guru."
+  },
+  {
+    "id": "ARB-12",
+    "competency": "Profesional",
+    "type": "mcq",
+    "title": "Profesi dokter",
+    "stimulus": "فَاطِمَةُ تَعْمَلُ فِي الْمُسْتَشْفَى وَتُعَالِجُ الْمَرْضَى.",
+    "prompt": "Profesi Fatimah adalah ....",
+    "options": [
+      "طَبِيبَةٌ",
+      "مُهَنْدِسَةٌ",
+      "مُمَرِّضَةٌ",
+      "مُدَرِّسَةٌ"
+    ],
+    "answer": 0,
+    "explanation": "تُعَالِجُ الْمَرْضَى berarti mengobati pasien, sehingga profesinya طَبِيبَةٌ (dokter perempuan)."
+  },
+  {
+    "id": "ARB-13",
+    "competency": "Profesional",
+    "type": "mcq",
+    "title": "Profesi polisi",
+    "stimulus": "هُوَ يَحْفَظُ الْأَمْنَ وَيَعْمَلُ فِي الشُّرْطَةِ.",
+    "prompt": "Kata profesi yang tepat adalah ....",
+    "options": [
+      "تَاجِرٌ",
+      "شُرْطِيٌّ",
+      "طَيَّارٌ",
+      "نَجَّارٌ"
+    ],
+    "answer": 1,
+    "explanation": "شُرْطِيٌّ berarti polisi."
+  },
+  {
+    "id": "ARB-14",
+    "competency": "Profesional",
+    "type": "mcq",
+    "title": "Profesi petani",
+    "stimulus": "عَلِيٌّ يَزْرَعُ الأَرُزَّ وَالْخُضْرَوَاتِ فِي الْحَقْلِ.",
+    "prompt": "Ali bekerja sebagai ....",
+    "options": [
+      "فَلَّاحٌ",
+      "طَبِيبٌ",
+      "سَائِقٌ",
+      "خَيَّاطٌ"
+    ],
+    "answer": 0,
+    "explanation": "Orang yang bercocok tanam di sawah atau ladang disebut فَلَّاحٌ (petani)."
+  },
+  {
+    "id": "ARB-15",
+    "competency": "Profesional",
+    "type": "tf",
+    "title": "Tempat kerja dokter",
+    "stimulus": "الطَّبِيبُ يَعْمَلُ فِي الْمُسْتَشْفَى.",
+    "prompt": "Pernyataan tersebut berarti: dokter bekerja di rumah sakit.",
+    "answer": true,
+    "explanation": "Benar. الْمُسْتَشْفَى berarti rumah sakit."
+  },
+  {
+    "id": "ARB-16",
+    "competency": "Profesional",
+    "type": "tf",
+    "title": "Tempat kerja guru",
+    "stimulus": "الْمُعَلِّمُ يَعْمَلُ فِي الْمَدْرَسَةِ.",
+    "prompt": "Pernyataan: Kalimat tersebut menyatakan bahwa guru bekerja di pasar.",
+    "answer": false,
+    "explanation": "Salah. الْمَدْرَسَةِ berarti sekolah, bukan pasar."
+  },
+  {
+    "id": "ARB-17",
+    "competency": "Profesional",
+    "type": "match",
+    "title": "Profesi dan arti",
+    "stimulus": "Pasangkan nama profesi bahasa Arab dengan arti Indonesianya.",
+    "prompt": "Jodohkan dengan tepat.",
+    "pairs": [
+      {
+        "left": "مُعَلِّمٌ",
+        "right": "Guru"
+      },
+      {
+        "left": "طَبِيبٌ",
+        "right": "Dokter"
+      },
+      {
+        "left": "شُرْطِيٌّ",
+        "right": "Polisi"
+      },
+      {
+        "left": "فَلَّاحٌ",
+        "right": "Petani"
+      }
+    ],
+    "explanation": "Keempat kosakata tersebut adalah nama profesi dasar dalam bahasa Arab."
+  },
+  {
+    "id": "ARB-18",
+    "competency": "Profesional",
+    "type": "match",
+    "title": "Profesi dan tempat kerja",
+    "stimulus": "Setiap profesi memiliki tempat kerja yang umum.",
+    "prompt": "Jodohkan profesi dengan tempat kerjanya.",
+    "pairs": [
+      {
+        "left": "مُعَلِّمٌ",
+        "right": "مَدْرَسَةٌ"
+      },
+      {
+        "left": "طَبِيبٌ",
+        "right": "مُسْتَشْفًى"
+      },
+      {
+        "left": "فَلَّاحٌ",
+        "right": "حَقْلٌ"
+      },
+      {
+        "left": "بَائِعٌ",
+        "right": "سُوقٌ"
+      }
+    ],
+    "explanation": "Guru–sekolah, dokter–rumah sakit, petani–ladang, dan penjual–pasar."
+  },
+  {
+    "id": "ARB-19",
+    "competency": "Profesional",
+    "type": "multi",
+    "title": "Profesi di sekolah dan kesehatan",
+    "stimulus": "Pilih kata yang merupakan nama profesi.",
+    "prompt": "Pilih semua jawaban yang benar.",
+    "options": [
+      "مُعَلِّمٌ",
+      "طَبِيبٌ",
+      "مَدْرَسَةٌ",
+      "مُمَرِّضٌ",
+      "مَكْتَبَةٌ"
+    ],
+    "answer": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "مُعَلِّمٌ, طَبِيبٌ, dan مُمَرِّضٌ adalah profesi; مَدْرَسَةٌ dan مَكْتَبَةٌ adalah tempat."
+  },
+  {
+    "id": "ARB-20",
+    "competency": "Profesional",
+    "type": "multi",
+    "title": "Profesi yang sesuai aktivitas",
+    "stimulus": "Seseorang bekerja mengajar, mengobati, menjaga keamanan, atau menanam tanaman.",
+    "prompt": "Pilih semua kata yang merupakan profesi yang disebutkan dalam konteks tersebut.",
+    "options": [
+      "مُعَلِّمٌ",
+      "طَبِيبٌ",
+      "شُرْطِيٌّ",
+      "فَلَّاحٌ",
+      "مَطْعَمٌ"
+    ],
+    "answer": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explanation": "Empat pilihan pertama adalah profesi, sedangkan مَطْعَمٌ berarti restoran."
+  },
+  {
+    "id": "ARB-21",
+    "competency": "Kepribadian",
+    "type": "mcq",
+    "title": "Isim isyarah laki-laki",
+    "stimulus": "_____ كِتَابٌ جَدِيدٌ.",
+    "prompt": "Kata tunjuk yang tepat untuk melengkapi kalimat adalah ....",
+    "options": [
+      "هٰذَا",
+      "هٰذِهِ",
+      "هُنَاكَ",
+      "مَنْ"
+    ],
+    "answer": 0,
+    "explanation": "كِتَابٌ termasuk mudzakkar, sehingga kata tunjuk yang tepat adalah هٰذَا."
+  },
+  {
+    "id": "ARB-22",
+    "competency": "Kepribadian",
+    "type": "mcq",
+    "title": "Isim isyarah perempuan",
+    "stimulus": "_____ سَيَّارَةٌ جَمِيلَةٌ.",
+    "prompt": "Pilih kata tunjuk yang benar.",
+    "options": [
+      "هٰذَا",
+      "هٰذِهِ",
+      "هُوَ",
+      "أَنْتَ"
+    ],
+    "answer": 1,
+    "explanation": "سَيَّارَةٌ termasuk muannats, sehingga digunakan هٰذِهِ."
+  },
+  {
+    "id": "ARB-23",
+    "competency": "Kepribadian",
+    "type": "mcq",
+    "title": "Dhamir هو",
+    "stimulus": "أَحْمَدُ طَالِبٌ. _____ مُجْتَهِدٌ.",
+    "prompt": "Dhamir yang tepat adalah ....",
+    "options": [
+      "هِيَ",
+      "هُوَ",
+      "أَنَا",
+      "نَحْنُ"
+    ],
+    "answer": 1,
+    "explanation": "Ahmad adalah laki-laki tunggal, sehingga dhamir yang tepat adalah هُوَ."
+  },
+  {
+    "id": "ARB-24",
+    "competency": "Kepribadian",
+    "type": "mcq",
+    "title": "Dhamir هي",
+    "stimulus": "فَاطِمَةُ طَالِبَةٌ. _____ ذَكِيَّةٌ.",
+    "prompt": "Dhamir yang tepat adalah ....",
+    "options": [
+      "هُوَ",
+      "هِيَ",
+      "أَنْتَ",
+      "هُمْ"
+    ],
+    "answer": 1,
+    "explanation": "Fatimah adalah perempuan tunggal, sehingga digunakan هِيَ."
+  },
+  {
+    "id": "ARB-25",
+    "competency": "Kepribadian",
+    "type": "tf",
+    "title": "Kesesuaian هذا",
+    "stimulus": "هٰذَا قَلَمٌ.",
+    "prompt": "Pernyataan: Penggunaan هٰذَا pada kalimat tersebut benar.",
+    "answer": true,
+    "explanation": "Benar. قَلَمٌ adalah kata benda mudzakkar sehingga cocok dengan هٰذَا."
+  },
+  {
+    "id": "ARB-26",
+    "competency": "Kepribadian",
+    "type": "tf",
+    "title": "Kesesuaian هذه",
+    "stimulus": "هٰذَا مَدْرَسَةٌ.",
+    "prompt": "Pernyataan: Kalimat tersebut sudah tepat secara dasar.",
+    "answer": false,
+    "explanation": "Salah. مَدْرَسَةٌ adalah muannats sehingga seharusnya هٰذِهِ مَدْرَسَةٌ."
+  },
+  {
+    "id": "ARB-27",
+    "competency": "Kepribadian",
+    "type": "match",
+    "title": "Dhamir dasar",
+    "stimulus": "Pasangkan dhamir dengan makna Indonesianya.",
+    "prompt": "Jodohkan dengan benar.",
+    "pairs": [
+      {
+        "left": "أَنَا",
+        "right": "Saya"
+      },
+      {
+        "left": "أَنْتَ",
+        "right": "Kamu laki-laki"
+      },
+      {
+        "left": "هُوَ",
+        "right": "Dia laki-laki"
+      },
+      {
+        "left": "هِيَ",
+        "right": "Dia perempuan"
+      }
+    ],
+    "explanation": "Keempatnya adalah dhamir dasar untuk orang pertama, kedua, dan ketiga tunggal."
+  },
+  {
+    "id": "ARB-28",
+    "competency": "Kepribadian",
+    "type": "match",
+    "title": "Kata tunjuk",
+    "stimulus": "Pasangkan kata tunjuk dengan penggunaan dasarnya.",
+    "prompt": "Jodohkan setiap bentuk dengan keterangannya.",
+    "pairs": [
+      {
+        "left": "هٰذَا",
+        "right": "Ini untuk mudzakkar"
+      },
+      {
+        "left": "هٰذِهِ",
+        "right": "Ini untuk muannats"
+      },
+      {
+        "left": "ذٰلِكَ",
+        "right": "Itu untuk mudzakkar"
+      },
+      {
+        "left": "تِلْكَ",
+        "right": "Itu untuk muannats"
+      }
+    ],
+    "explanation": "هذا/هذه digunakan untuk dekat, sedangkan ذلك/تلك untuk jauh."
+  },
+  {
+    "id": "ARB-29",
+    "competency": "Kepribadian",
+    "type": "multi",
+    "title": "Kalimat yang benar",
+    "stimulus": "Perhatikan beberapa kalimat sederhana berikut.",
+    "prompt": "Pilih semua kalimat yang benar secara dasar.",
+    "options": [
+      "هٰذَا كِتَابٌ",
+      "هٰذِهِ سَيَّارَةٌ",
+      "هٰذَا مَدْرَسَةٌ",
+      "هُوَ طَالِبٌ",
+      "هِيَ طَالِبَةٌ"
+    ],
+    "answer": [
+      0,
+      1,
+      3,
+      4
+    ],
+    "explanation": "مَدْرَسَةٌ adalah muannats sehingga tidak cocok dengan هٰذَا; bentuk yang benar adalah هٰذِهِ مَدْرَسَةٌ."
+  },
+  {
+    "id": "ARB-30",
+    "competency": "Kepribadian",
+    "type": "multi",
+    "title": "Dhamir yang tepat",
+    "stimulus": "Pilih pasangan subjek dan dhamir yang sesuai.",
+    "prompt": "Pilih semua pasangan yang benar.",
+    "options": [
+      "أَحْمَدُ — هُوَ",
+      "فَاطِمَةُ — هِيَ",
+      "أَنَا — saya",
+      "هُوَ — dia perempuan",
+      "هِيَ — dia perempuan"
+    ],
+    "answer": [
+      0,
+      1,
+      2,
+      4
+    ],
+    "explanation": "هُوَ berarti dia laki-laki, sedangkan هِيَ berarti dia perempuan."
+  },
+  {
+    "id": "ARB-31",
+    "competency": "Sosial",
+    "type": "mcq",
+    "title": "Menjawab salam",
+    "stimulus": "Teman berkata: السَّلَامُ عَلَيْكُمْ",
+    "prompt": "Jawaban yang paling tepat adalah ....",
+    "options": [
+      "صَبَاحُ الْخَيْرِ",
+      "وَعَلَيْكُمُ السَّلَامُ",
+      "شُكْرًا",
+      "إِلَى اللِّقَاءِ"
+    ],
+    "answer": 1,
+    "explanation": "Jawaban salam yang tepat adalah وَعَلَيْكُمُ السَّلَامُ."
+  },
+  {
+    "id": "ARB-32",
+    "competency": "Sosial",
+    "type": "mcq",
+    "title": "Menanyakan nama",
+    "stimulus": "أَحْمَدُ: مَا اسْمُكَ؟",
+    "prompt": "Jawaban yang sesuai adalah ....",
+    "options": [
+      "اسْمِي عَلِيٌّ",
+      "أَنَا فِي الْفَصْلِ",
+      "هٰذَا كِتَابٌ",
+      "مَعَ السَّلَامَةِ"
+    ],
+    "answer": 0,
+    "explanation": "مَا اسْمُكَ؟ berarti 'Siapa namamu?', sehingga jawaban yang tepat adalah اسْمِي عَلِيٌّ."
+  },
+  {
+    "id": "ARB-33",
+    "competency": "Sosial",
+    "type": "mcq",
+    "title": "Menanyakan profesi",
+    "stimulus": "مَا مِهْنَتُكَ؟",
+    "prompt": "Pertanyaan tersebut berarti ....",
+    "options": [
+      "Di mana rumahmu?",
+      "Apa profesimu?",
+      "Siapa namamu?",
+      "Berapa umurmu?"
+    ],
+    "answer": 1,
+    "explanation": "مَا مِهْنَتُكَ؟ berarti 'Apa profesimu?'"
+  },
+  {
+    "id": "ARB-34",
+    "competency": "Sosial",
+    "type": "mcq",
+    "title": "Menanyakan keadaan",
+    "stimulus": "كَيْفَ حَالُكَ؟",
+    "prompt": "Jawaban yang paling sesuai adalah ....",
+    "options": [
+      "أَنَا بِخَيْرٍ",
+      "اسْمِي حَسَنٌ",
+      "هٰذَا بَيْتٌ",
+      "هُوَ مُعَلِّمٌ"
+    ],
+    "answer": 0,
+    "explanation": "كَيْفَ حَالُكَ؟ menanyakan keadaan; jawaban umum adalah أَنَا بِخَيْرٍ."
+  },
+  {
+    "id": "ARB-35",
+    "competency": "Sosial",
+    "type": "tf",
+    "title": "Arti كيف حالك",
+    "stimulus": "كَيْفَ حَالُكَ؟",
+    "prompt": "Pernyataan: Ungkapan tersebut digunakan untuk menanyakan kabar atau keadaan.",
+    "answer": true,
+    "explanation": "Benar. كَيْفَ حَالُكَ؟ berarti 'Apa kabar?' atau 'Bagaimana keadaanmu?'"
+  },
+  {
+    "id": "ARB-36",
+    "competency": "Sosial",
+    "type": "tf",
+    "title": "Arti إلى اللقاء",
+    "stimulus": "إِلَى اللِّقَاءِ",
+    "prompt": "Pernyataan: Ungkapan tersebut berarti 'selamat pagi'.",
+    "answer": false,
+    "explanation": "Salah. إِلَى اللِّقَاءِ berarti 'sampai jumpa'; selamat pagi adalah صَبَاحُ الْخَيْرِ."
+  },
+  {
+    "id": "ARB-37",
+    "competency": "Sosial",
+    "type": "match",
+    "title": "Ungkapan percakapan",
+    "stimulus": "Pasangkan ungkapan bahasa Arab dengan fungsinya.",
+    "prompt": "Jodohkan dengan tepat.",
+    "pairs": [
+      {
+        "left": "السَّلَامُ عَلَيْكُمْ",
+        "right": "Mengucapkan salam"
+      },
+      {
+        "left": "مَا اسْمُكَ؟",
+        "right": "Menanyakan nama"
+      },
+      {
+        "left": "كَيْفَ حَالُكَ؟",
+        "right": "Menanyakan kabar"
+      },
+      {
+        "left": "إِلَى اللِّقَاءِ",
+        "right": "Mengucapkan sampai jumpa"
+      }
+    ],
+    "explanation": "Ungkapan-ungkapan tersebut sering digunakan dalam percakapan sehari-hari."
+  },
+  {
+    "id": "ARB-38",
+    "competency": "Sosial",
+    "type": "match",
+    "title": "Pertanyaan dan jawaban",
+    "stimulus": "Pasangkan pertanyaan dengan jawaban yang paling sesuai.",
+    "prompt": "Jodohkan semua pasangan.",
+    "pairs": [
+      {
+        "left": "مَا اسْمُكَ؟",
+        "right": "اسْمِي عَلِيٌّ"
+      },
+      {
+        "left": "كَيْفَ حَالُكَ؟",
+        "right": "أَنَا بِخَيْرٍ"
+      },
+      {
+        "left": "مَا مِهْنَتُكَ؟",
+        "right": "أَنَا مُعَلِّمٌ"
+      },
+      {
+        "left": "أَيْنَ بَيْتُكَ؟",
+        "right": "بَيْتِي فِي مُنْتِيلَان"
+      }
+    ],
+    "explanation": "Setiap jawaban menanggapi informasi yang ditanyakan: nama, keadaan, profesi, dan lokasi rumah."
+  },
+  {
+    "id": "ARB-39",
+    "competency": "Sosial",
+    "type": "multi",
+    "title": "Ungkapan perkenalan",
+    "stimulus": "Kamu sedang memperkenalkan diri kepada teman baru.",
+    "prompt": "Pilih semua ungkapan yang sesuai untuk perkenalan sederhana.",
+    "options": [
+      "اسْمِي أَحْمَدُ",
+      "أَنَا طَالِبٌ",
+      "أَنَا مِنْ إِنْدُونِيسِيَا",
+      "هٰذَا قَلَمٌ",
+      "عُمْرِي ثَلَاثَ عَشْرَةَ سَنَةً"
+    ],
+    "answer": [
+      0,
+      1,
+      2,
+      4
+    ],
+    "explanation": "Nama, status sebagai siswa, asal, dan umur dapat digunakan dalam perkenalan; 'ini pulpen' bukan informasi perkenalan diri."
+  },
+  {
+    "id": "ARB-40",
+    "competency": "Sosial",
+    "type": "multi",
+    "title": "Respons percakapan",
+    "stimulus": "Pilih respons yang wajar digunakan dalam percakapan dasar bahasa Arab.",
+    "prompt": "Pilih semua jawaban yang benar.",
+    "options": [
+      "وَعَلَيْكُمُ السَّلَامُ",
+      "أَنَا بِخَيْرٍ",
+      "شُكْرًا",
+      "مَعَ السَّلَامَةِ",
+      "سَبُّورَةٌ"
+    ],
+    "answer": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explanation": "Empat pilihan pertama adalah ungkapan percakapan; سَبُّورَةٌ hanya berarti papan tulis."
+  },
+  {
+    "id": "ARB-41",
+    "competency": "Integratif",
+    "type": "mcq",
+    "title": "Membaca teks pendek",
+    "stimulus": "اِسْمِي يُوسُفُ. أَنَا طَالِبٌ. أَدْرُسُ فِي الْمَدْرَسَةِ الْمُتَوَسِّطَةِ.",
+    "prompt": "Siapakah Yusuf berdasarkan teks?",
+    "options": [
+      "Guru",
+      "Siswa",
+      "Dokter",
+      "Polisi"
+    ],
+    "answer": 1,
+    "explanation": "Dalam teks terdapat kalimat أَنَا طَالِبٌ yang berarti 'Saya seorang siswa'."
+  },
+  {
+    "id": "ARB-42",
+    "competency": "Integratif",
+    "type": "mcq",
+    "title": "Memahami profesi dalam teks",
+    "stimulus": "أَبِي طَبِيبٌ. يَعْمَلُ فِي الْمُسْتَشْفَى كُلَّ يَوْمٍ.",
+    "prompt": "Di mana ayah bekerja?",
+    "options": [
+      "Di sekolah",
+      "Di pasar",
+      "Di rumah sakit",
+      "Di ladang"
+    ],
+    "answer": 2,
+    "explanation": "يَعْمَلُ فِي الْمُسْتَشْفَى berarti bekerja di rumah sakit."
+  },
+  {
+    "id": "ARB-43",
+    "competency": "Integratif",
+    "type": "mcq",
+    "title": "Memahami kegiatan harian",
+    "stimulus": "تَذْهَبُ فَاطِمَةُ إِلَى الْمَدْرَسَةِ فِي السَّاعَةِ السَّابِعَةِ صَبَاحًا.",
+    "prompt": "Kapan Fatimah pergi ke sekolah?",
+    "options": [
+      "Pukul tujuh pagi",
+      "Pukul delapan pagi",
+      "Pukul tujuh malam",
+      "Pukul enam pagi"
+    ],
+    "answer": 0,
+    "explanation": "السَّاعَةِ السَّابِعَةِ صَبَاحًا berarti pukul tujuh pagi."
+  },
+  {
+    "id": "ARB-44",
+    "competency": "Integratif",
+    "type": "mcq",
+    "title": "Memahami deskripsi",
+    "stimulus": "هٰذَا فَصْلِي. فِيهِ سَبُّورَةٌ وَعَشَرَةُ كَرَاسِيَّ وَمَكْتَبٌ لِلْمُعَلِّمِ.",
+    "prompt": "Benda yang TIDAK disebutkan dalam teks adalah ....",
+    "options": [
+      "Papan tulis",
+      "Kursi",
+      "Meja guru",
+      "Mobil"
+    ],
+    "answer": 3,
+    "explanation": "Teks menyebut papan tulis, sepuluh kursi, dan meja guru, tetapi tidak menyebut mobil."
+  },
+  {
+    "id": "ARB-45",
+    "competency": "Integratif",
+    "type": "tf",
+    "title": "Informasi teks keluarga",
+    "stimulus": "أُمِّي مُعَلِّمَةٌ وَأَبِي مُهَنْدِسٌ.",
+    "prompt": "Pernyataan: Ibu adalah guru dan ayah adalah insinyur.",
+    "answer": true,
+    "explanation": "Benar. مُعَلِّمَةٌ berarti guru perempuan dan مُهَنْدِسٌ berarti insinyur."
+  },
+  {
+    "id": "ARB-46",
+    "competency": "Integratif",
+    "type": "tf",
+    "title": "Informasi lokasi",
+    "stimulus": "الْمَكْتَبَةُ بِجَانِبِ الْفَصْلِ.",
+    "prompt": "Pernyataan: Perpustakaan berada di dalam rumah sakit.",
+    "answer": false,
+    "explanation": "Salah. بِجَانِبِ الْفَصْلِ berarti 'di samping kelas'."
+  },
+  {
+    "id": "ARB-47",
+    "competency": "Integratif",
+    "type": "match",
+    "title": "Memahami kalimat",
+    "stimulus": "Jodohkan kalimat Arab dengan makna Indonesianya.",
+    "prompt": "Pasangkan semua kalimat dengan tepat.",
+    "pairs": [
+      {
+        "left": "أَنَا طَالِبٌ",
+        "right": "Saya seorang siswa"
+      },
+      {
+        "left": "أَبِي طَبِيبٌ",
+        "right": "Ayah saya seorang dokter"
+      },
+      {
+        "left": "هٰذَا كِتَابٌ",
+        "right": "Ini sebuah buku"
+      },
+      {
+        "left": "أَيْنَ الْمَدْرَسَةُ؟",
+        "right": "Di mana sekolah?"
+      }
+    ],
+    "explanation": "Soal ini menggabungkan kosakata, dhamir, kata tunjuk, dan kalimat tanya."
+  },
+  {
+    "id": "ARB-48",
+    "competency": "Integratif",
+    "type": "match",
+    "title": "Aktivitas dan tempat",
+    "stimulus": "Hubungkan aktivitas dengan tempat yang paling sesuai.",
+    "prompt": "Jodohkan aktivitas dengan tempatnya.",
+    "pairs": [
+      {
+        "left": "أَدْرُسُ",
+        "right": "الْمَدْرَسَةُ"
+      },
+      {
+        "left": "أَقْرَأُ الْكُتُبَ",
+        "right": "الْمَكْتَبَةُ"
+      },
+      {
+        "left": "أَشْتَرِي الطَّعَامَ",
+        "right": "السُّوقُ"
+      },
+      {
+        "left": "يُعَالِجُ الْمَرْضَى",
+        "right": "الْمُسْتَشْفَى"
+      }
+    ],
+    "explanation": "Belajar–sekolah, membaca buku–perpustakaan, membeli makanan–pasar, dan mengobati pasien–rumah sakit."
+  },
+  {
+    "id": "ARB-49",
+    "competency": "Integratif",
+    "type": "multi",
+    "title": "Pemahaman bacaan",
+    "stimulus": "اِسْمِي خَالِدٌ. أَنَا طَالِبٌ. أَبِي مُعَلِّمٌ وَأُمِّي طَبِيبَةٌ. أَذْهَبُ إِلَى الْمَدْرَسَةِ صَبَاحًا.",
+    "prompt": "Pilih semua informasi yang benar berdasarkan teks.",
+    "options": [
+      "Khalid adalah siswa",
+      "Ayah Khalid adalah guru",
+      "Ibu Khalid adalah dokter",
+      "Khalid pergi ke sekolah pagi hari",
+      "Khalid adalah polisi"
+    ],
+    "answer": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explanation": "Empat informasi pertama disebutkan langsung dalam teks; tidak ada keterangan bahwa Khalid seorang polisi."
+  },
+  {
+    "id": "ARB-50",
+    "competency": "Integratif",
+    "type": "multi",
+    "title": "Final Challenge Bahasa Arab",
+    "stimulus": "هٰذِهِ مَرْيَمُ. هِيَ طَالِبَةٌ مُجْتَهِدَةٌ. تَذْهَبُ إِلَى الْمَدْرَسَةِ فِي السَّاعَةِ السَّابِعَةِ. تُحِبُّ اللُّغَةَ الْعَرَبِيَّةَ وَتَقْرَأُ الْكُتُبَ فِي الْمَكْتَبَةِ.",
+    "prompt": "Pilih semua pernyataan yang benar berdasarkan teks final.",
+    "options": [
+      "Maryam adalah siswi",
+      "Maryam pergi ke sekolah pukul tujuh",
+      "Maryam menyukai bahasa Arab",
+      "Maryam membaca buku di perpustakaan",
+      "Maryam bekerja sebagai dokter"
+    ],
+    "answer": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explanation": "Teks menyatakan Maryam adalah siswi rajin, pergi ke sekolah pukul tujuh, menyukai bahasa Arab, dan membaca buku di perpustakaan."
+  }
+]

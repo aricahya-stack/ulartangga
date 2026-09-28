@@ -1,0 +1,23 @@
+{
+  "name": "ular-tangga-3d-playcanvas",
+  "private": true,
+  "version": "3.3.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@mediapipe/tasks-vision": "1.0.1",
+    "@supabase/supabase-js": "^2.117.2",
+    "playcanvas": "2.22.2"
+  },
+  "devDependencies": {
+    "typescript": "5.8.3",
+    "vite": "8.3.0"
+  },
+  "engines": {
+    "node": "22.x"
+  }
+}
