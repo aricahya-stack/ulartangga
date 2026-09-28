@@ -62,3 +62,17 @@ body.ar-active #tile-label-layer {display:none}
 .account-card textarea {display:block;box-sizing:border-box;border:1px solid #6386a2;border-radius:10px;padding:11px;background:#0c1b2d;color:#fff;resize:vertical;min-height:74px;font:1rem system-ui,'Noto Naskh Arabic',sans-serif}
 #edit-question {display:grid!important;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px}
 #edit-question select,#edit-question input,#edit-question textarea {width:100%!important}
+/* XR: only controls and question panels appear above the camera compositor. */
+#ar-dom-overlay {position:fixed;inset:0;z-index:1000;background:transparent;pointer-events:none}
+#ar-dom-overlay .control-panel {position:absolute;right:calc(10px + env(safe-area-inset-right));bottom:calc(10px + env(safe-area-inset-bottom));width:min(240px,56vw);max-height:40vh;overflow:auto;pointer-events:auto;background:rgba(8,23,38,.83);border-radius:16px;padding:12px}
+#ar-dom-overlay .overlay {pointer-events:auto}
+#ar-fallback-btn {position:absolute;top:calc(12px + env(safe-area-inset-top));right:12px;z-index:2;pointer-events:auto;color:white;background:rgba(6,27,45,.85);border:1px solid #7ab7da;border-radius:10px;padding:10px}
+body.ar-active .scene-panel {background:transparent;box-shadow:none;border:0}
+body.ar-active .scene-vignette,body.ar-active .cinematic-frame:after {display:none}
+body.ar-active .side-panel {display:none}
+/* Camera preview keeps the board playable when immersive WebXR is unavailable. */
+body.camera-preview .scene-panel {background:transparent;box-shadow:none}
+#ar-camera-video {position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+body.camera-preview #renderCanvas {position:relative;z-index:1}
+body.camera-preview .scene-vignette,body.camera-preview .cinematic-frame:after {display:none}
+body.camera-preview .scene-badge {display:none}

@@ -52,6 +52,10 @@ Di Vercel, import repo dan set:
 
 Atur Environment Variables Vercel (Development/Preview/Production sesuai kebutuhan):
 
+Jika Anda menghubungkan Supabase melalui integrasi Vercel, biasanya `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`, `SUPABASE_URL`, `SUPABASE_PUBLISHABLE_KEY`, dan `SUPABASE_SECRET_KEY` sudah dibuat otomatis. Versi ini dapat membaca dua variabel publik `NEXT_PUBLIC_` tersebut. Pastikan variabel server tersedia dan koneksi tidak menampilkan masalah; Anda tidak harus menambahkan duplikat `VITE_`.
+
+Jika tidak memakai integrasi otomatis, atur variabel berikut secara manual:
+
 | Nama | Sumber | Keterangan |
 |---|---|---|
 | `VITE_SUPABASE_URL` | Supabase Project URL | Terlihat di browser |
@@ -66,12 +70,12 @@ Untuk lokal: salin `.env.example` menjadi `.env`, isi nilainya, `npm install`, `
 
 ## 3. Alur penggunaan
 
-1. Siswa daftar/login; guru dan admin dapat dibuat dari dashboard Admin setelah akun admin pertama disiapkan.
+1. Situs langsung membuka halaman login/daftar. Siswa harus masuk terlebih dahulu sebelum bermain. Jika variabel Supabase belum siap, halaman login menjelaskan konfigurasinya dan tidak membuka permainan sebagai tamu. Guru dan admin dapat dibuat dari dashboard Admin setelah akun admin pertama disiapkan.
 2. Admin membuat akun guru/siswa, membuat kelas, memilih guru, kemudian memasukkan siswa ke kelas. Admin dapat mengatur ulang kata sandi akun melalui dashboard; pengguna dapat meminta tautan pemulihan dari halaman login. Guru/admin dapat mengedit soal Bahasa Arab satu per satu di dashboard; format kunci mengikuti JSON (`0`, `true`, `[0,2]`, indeks mulai dari nol). Perubahan bank berlaku global pada permainan baru. Hindari mengedit soal saat ada pertandingan online berlangsung.
 3. **Main lokal:** dua pion pada satu perangkat; hanya hasil pion A yang dihubungkan ke akun login.
 4. **Main online:** pemain A membuat ruang dan membagikan kode 8 karakter; pemain B login di perangkat lain dan memasukkan kode. Pertandingan dimulai otomatis pada kedua perangkat; masing-masing mengendalikan pionnya. Dadu dan urutan giliran dikirim melalui Supabase; jawaban lawan disalin ke papan perangkat lain. Pertahankan kedua tab terbuka sampai permainan selesai.
 5. Setiap akun melihat riwayat, badge dan peringkat kelas. Guru melihat hasil kelas yang diajar dan dapat ekspor CSV; admin mengelola akun dan kelas.
-6. Tombol **Mulai AR** tersedia setelah game dimuat. Gunakan perangkat/browser dengan dukungan WebXR AR dan HTTPS. Papan muncul sekitar 1,25 m di depan kamera, dalam skala mini; panel soal tetap berupa tombol HTML. Bila WebXR tidak tersedia, gunakan tampilan 3D biasa.
+6. Tombol **Mulai AR** tersedia setelah game dimuat. Gunakan perangkat/browser dengan dukungan WebXR AR dan HTTPS. Papan muncul di depan kamera dalam skala mini; panel soal tetap berupa tombol HTML dalam lapisan transparan. Bila WebXR tidak tersedia atau kameranya tetap hitam, tombol **Kamera hitam? Tampilkan kamera** membuka pratinjau kamera. Pratinjau ini menumpangkan game di atas video, tanpa pelacakan posisi permukaan. Anda juga dapat kembali ke tampilan 3D biasa.
 
 ## Hal yang perlu diketahui
 
@@ -79,7 +83,7 @@ Untuk lokal: salin `.env.example` menjadi `.env`, isi nilainya, `npm install`, `
 - Game berakhir setelah pemain menjawab Final Challenge di petak 50. Bank zona acak: soal ID `ARB-50` tidak selalu tampil persis di petak 50. Bank JSON bawaan dipakai bila belum ada bank pengganti di Supabase.
 - Sesi yang ditutup sebelum kemenangan menyimpan progres terakhir; **belum ada pemulihan posisi permainan**. Ruang online juga tidak menyediakan join ulang/reconnect di tengah pertandingan atau penentuan hasil oleh server saat lawan keluar.
 - Hasil dan jawaban berasal dari browser pemain. RLS membatasi akses dan pengiriman antarpengguna, tetapi hasil belum diverifikasi ulang di server. Jika digunakan untuk ujian bernilai tinggi, tambahkan validasi otoritatif server sebelum dipakai untuk penilaian resmi.
-- AR memerlukan dukungan WebXR; belum ada deteksi marker atau peletakan papan melalui ketukan permukaan. Posisi papan relatif ke awal sesi XR.
+- AR memerlukan dukungan WebXR; belum ada deteksi marker atau peletakan papan melalui ketukan permukaan. Posisi papan relatif ke awal sesi XR. Izin kamera saja tidak menjamin perangkat mendukung WebXR AR. Pratinjau kamera adalah mode cadangan tanpa pelacakan spasial.
 - Fitur online dan admin API memerlukan proyek Supabase serta deployment Vercel aktif; tidak dapat diuji penuh hanya dengan build lokal.
 
 ## Pemeriksaan setelah deploy

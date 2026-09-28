@@ -6,19 +6,22 @@ import type { Question } from '../questions/types';
 
 type Session = {id:string;user_id:string;mode:string;score:number;final_tile:number;correct_answers:number;total_answers:number;started_at:string;status:string};
 export class Portal {
-  private root=document.createElement('div');
+  private root=document.querySelector<HTMLElement>('#account-portal') ?? document.createElement('div');
   private profile:Profile|null=null;
   private multiplayer:Multiplayer|null=null;
   private bankVersion:number|null=null;
   constructor(private bridge:GameBridge){
-    this.root.id='account-portal';document.body.appendChild(this.root);
+    this.root.id='account-portal';if(!this.root.isConnected)document.body.appendChild(this.root);
     this.renderLogin();
     void this.load();
   }
   private message(msg:string){const el=this.root.querySelector('#account-message');if(el)el.textContent=msg;this.bridge.notice(msg);}
   private async load(){
-    if(!db){this.root.innerHTML=`<section class="account-card"><h2>Mode tanpa Supabase</h2><p>Isi berkas <code>.env</code> untuk mengaktifkan akun dan pertandingan online. Game asli tetap bisa dimainkan.</p><button id="guest-play">Main lokal</button></section>`;
-      this.root.querySelector('#guest-play')?.addEventListener('click',()=>this.root.classList.add('hidden'));return;}
+    if(!db){
+      this.message('Koneksi akun belum tersedia. Hubungkan proyek Supabase ke Vercel, pastikan NEXT_PUBLIC_SUPABASE_URL dan NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY tersedia, lalu Redeploy.');
+      this.root.querySelectorAll<HTMLButtonElement>('#auth-form button, #forgot-btn').forEach(button=>button.disabled=true);
+      return;
+    }
     const {data}=await db.auth.getUser();
     if(data.user)await this.enter(data.user.id);
     db.auth.onAuthStateChange((event,session)=>{if(event==='SIGNED_OUT'){this.bridge.userId=null;this.profile=null;this.renderLogin();}else if(event==='PASSWORD_RECOVERY'){this.renderPasswordReset();}else if(event==='SIGNED_IN'&&session?.user)void this.enter(session.user.id);});

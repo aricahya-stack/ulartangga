@@ -94,6 +94,14 @@ async function bootstrap() {
 
 bootstrap().catch((error) => {
   console.error(error);
+  const login = document.querySelector<HTMLElement>('#account-portal');
+  if(login){
+    login.replaceChildren();
+    const card=document.createElement('section');card.className='account-card';
+    const heading=document.createElement('h2');heading.textContent='Gagal menyiapkan permainan';
+    const detail=document.createElement('p');detail.textContent=String(error instanceof Error ? error.message : error);
+    card.append(heading,detail);login.append(card);
+  }
   const overlay = document.querySelector<HTMLElement>('#start-overlay');
   if (overlay) {
     overlay.innerHTML = `<div class="start-card"><span class="eyebrow">Gagal memuat</span><h2>PlayCanvas tidak dapat dijalankan</h2><p>${String(error instanceof Error ? error.message : error)}</p><p>Jalankan melalui <code>npm install</code> lalu <code>npm run dev</code>.</p></div>`;
