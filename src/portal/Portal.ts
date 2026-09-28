@@ -27,12 +27,34 @@ export class Portal {
     db.auth.onAuthStateChange((event,session)=>{if(event==='SIGNED_OUT'){this.bridge.userId=null;this.profile=null;this.renderLogin();}else if(event==='PASSWORD_RECOVERY'){this.renderPasswordReset();}else if(event==='SIGNED_IN'&&session?.user)void this.enter(session.user.id);});
   }
   private renderLogin(){
-    this.root.classList.remove('hidden');
-    this.root.innerHTML=`<section class="account-card"><span class="portal-kicker">🐍 ULAR TANGGA 3D</span><h2>Bahasa Arab</h2><p>Masuk untuk menyimpan nilai dan bermain bersama teman.</p>
-      <form id="auth-form"><label>Nama (pendaftaran)<input name="full_name" autocomplete="name" maxlength="80"></label><label>Email<input name="email" type="email" required autocomplete="email"></label>
-      <label>Kata sandi<input name="password" type="password" required minlength="6" autocomplete="current-password"></label>
-      <div class="portal-actions"><button class="primary" type="submit" name="mode" value="login">Masuk</button><button type="submit" name="mode" value="signup">Daftar siswa</button></div></form><button id="forgot-btn" type="button">Lupa kata sandi</button><p id="account-message" role="status"></p></section>`;
+    this.root.classList.remove('hidden','login-loading');
+    this.root.innerHTML=`<main class="login-shell"><section class="login-brand" aria-label="Ular Tangga Bahasa Arab">
+      <div class="login-logo"><i class="bi bi-dice-5-fill" aria-hidden="true"></i><span>ULAR TANGGA <strong>BAHASA ARAB</strong></span></div>
+      <div class="login-brand-content"><span class="login-badge"><i class="bi bi-stars" aria-hidden="true"></i> BELAJAR SAMBIL BERMAIN</span>
+      <div class="login-arabic" lang="ar" dir="rtl">هَيَّا نَتَعَلَّمْ</div><h1>Petualangan belajar<br><em>dimulai di sini.</em></h1>
+      <p>Jelajahi papan permainan, jawab tantangan Bahasa Arab, dan raih prestasi bersama teman.</p>
+      <div class="login-highlights"><span><i class="bi bi-controller" aria-hidden="true"></i> Bermain</span><span><i class="bi bi-book-half" aria-hidden="true"></i> Belajar</span><span><i class="bi bi-trophy-fill" aria-hidden="true"></i> Berprestasi</span></div></div>
+      <span class="login-brand-footer">Belajar terasa lebih seru, selangkah demi selangkah.</span>
+    </section><section class="login-panel" aria-labelledby="login-title"><div class="login-panel-inner">
+      <div class="login-mobile-logo"><i class="bi bi-dice-5-fill" aria-hidden="true"></i> ULAR TANGGA BAHASA ARAB</div>
+      <span class="login-eyebrow"><i class="bi bi-person-circle" aria-hidden="true"></i> AKUN PEMAIN</span>
+      <h2 id="login-title">Selamat datang!</h2><p class="login-intro">Masuk ke akunmu untuk melanjutkan petualangan.</p>
+      <form id="auth-form"><label for="login-email">Alamat email</label><div class="login-input-wrap"><i class="bi bi-envelope" aria-hidden="true"></i><input id="login-email" name="email" type="email" placeholder="nama@email.com" required autocomplete="username" autofocus></div>
+      <label for="login-password">Kata sandi</label><div class="login-input-wrap"><i class="bi bi-lock" aria-hidden="true"></i><input id="login-password" name="password" type="password" placeholder="Masukkan kata sandi" required autocomplete="current-password"><button id="password-visibility" type="button" aria-label="Tampilkan kata sandi" aria-pressed="false"><i class="bi bi-eye" aria-hidden="true"></i></button></div>
+      <div class="login-help"><button id="forgot-btn" type="button">Lupa kata sandi?</button></div>
+      <button class="login-submit" type="submit">Masuk ke permainan <i class="bi bi-arrow-right" aria-hidden="true"></i></button></form>
+      <p id="account-message" class="login-message" role="status" aria-live="polite"></p>
+      <div class="login-footnote"><i class="bi bi-shield-lock" aria-hidden="true"></i> Akun diberikan oleh admin sekolah.</div>
+    </div></section></main>`;
     this.root.querySelector<HTMLFormElement>('#auth-form')!.addEventListener('submit',e=>void this.authenticate(e));
+    this.root.querySelector<HTMLButtonElement>('#password-visibility')?.addEventListener('click',()=>{
+      const input=this.root.querySelector<HTMLInputElement>('#login-password')!;
+      const button=this.root.querySelector<HTMLButtonElement>('#password-visibility')!;
+      const visible=input.type==='password';input.type=visible?'text':'password';
+      button.setAttribute('aria-label',visible?'Sembunyikan kata sandi':'Tampilkan kata sandi');
+      button.setAttribute('aria-pressed',String(visible));
+      button.querySelector('i')!.className=visible?'bi bi-eye-slash':'bi bi-eye';
+    });
     this.root.querySelector('#forgot-btn')?.addEventListener('click',async()=>{
       if(!db)return;
       const email=this.root.querySelector<HTMLInputElement>('input[name=email]')?.value.trim();
@@ -59,18 +81,12 @@ export class Portal {
     const form=event.currentTarget as HTMLFormElement;
     const input=new FormData(form);
     const email=String(input.get('email')||'');const password=String(input.get('password')||'');
-    const mode=(event.submitter as HTMLButtonElement)?.value;
-    this.message('Memproses akun…');
+    const button=form.querySelector<HTMLButtonElement>('.login-submit')!;
+    button.disabled=true;this.message('Sedang masuk…');
     try{
-      if(mode==='signup'){
-        const full_name=String(input.get('full_name')||'').trim();
-        if(!full_name)throw Error('Nama siswa wajib diisi.');
-        const {data,error}=await db.auth.signUp({email,password,options:{data:{full_name}}});need(data,error);
-        this.message(data.session?'Akun dibuat.':'Akun dibuat. Periksa email untuk konfirmasi, lalu masuk.');
-      }else{
-        const {error}=await db.auth.signInWithPassword({email,password});if(error)throw error;
-      }
+      const {error}=await db.auth.signInWithPassword({email,password});if(error)throw error;
     }catch(e){this.message(e instanceof Error?e.message:String(e));}
+    finally{button.disabled=false;}
   }
   private async enter(id:string){
     if(!db)return;

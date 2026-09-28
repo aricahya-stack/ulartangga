@@ -1,3 +1,4 @@
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import './styles.css';
 import * as pc from 'playcanvas';
 import { GameManager } from './game/GameManager';

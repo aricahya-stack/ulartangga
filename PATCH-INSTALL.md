@@ -1,14 +1,10 @@
-# PATCH Login + Perbaikan Kamera AR
+# Patch v3 — Login tanpa pendaftaran + Bootstrap Icons
 
-Patch ini untuk proyek `ulartangga-profesi-main` versi integrasi Bahasa Arab/Supabase/AR sebelumnya.
+Patch ini dipasang di atas proyek **ulartangga-profesi-main** yang sudah memakai patch v2 Login + AR (atau ZIP lengkap revisi sebelumnya). Isinya hanya file yang berubah. Tidak perlu mengulang query SQL jika 01–04 sudah berhasil dijalankan.
 
-1. Ekstrak ZIP patch.
-2. Salin **isi patch** ke root repository GitHub yang memuat `package.json`, `src/`, dan `api/`.
-3. Izinkan penimpaan sembilan file dengan path yang sama. Jangan mengganti seluruh folder proyek.
-4. Commit dan push ke GitHub. Tunggu deployment Vercel selesai, atau pilih Redeploy jika diperlukan.
-5. Buka alamat situs, masuk dengan akun, lalu uji tombol AR di HP.
+1. Ekstrak ZIP patch dan **salin seluruh isi ke root proyek `ulartangga-profesi-main/`**. Izinkan penimpaan file dengan nama yang sama; jangan meletakkan folder patch sebagai subfolder proyek.
+2. Jalankan `npm install` pada root proyek. `bootstrap-icons` sudah tercantum di `package.json` dan `package-lock.json`.
+3. Jalankan `npm run build` bila ingin memeriksa lokal, lalu commit/push perubahan. Vercel akan build dan deploy ulang (atau lakukan redeploy setelah push).
+4. Admin pertama: di Supabase buka **Authentication → Users → Add user**, buat akun menggunakan email dan kata sandi Anda. Jalankan satu query UPDATE peran dalam `README-INSTALASI.md`, lalu masuk. Akun guru/siswa berikutnya dibuat melalui dashboard Admin. Tidak tersedia menu pendaftaran mandiri dan tidak ada username/password bawaan.
 
-Tidak ada query SQL baru. Folder `original/`, `src/data/questions.json`, `supabase/`, serta `api/` tidak termasuk patch.
-Login kini membaca `NEXT_PUBLIC_SUPABASE_URL` dan `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` dari koneksi otomatis Vercel–Supabase, dengan `VITE_*` tetap didukung. Tidak perlu menambahkan secret ke browser.
-
-WebXR menggunakan DOM overlay transparan khusus. Bila gambar kamera masih hitam, tekan tombol **Kamera hitam? Tampilkan kamera** di layar AR. Mode ini adalah pratinjau video tanpa pelacakan posisi papan.
+Setelah deploy, buka ulang halaman (hard refresh bila masih melihat login lama) dan masuk memakai email serta kata sandi akun yang telah dibuat.

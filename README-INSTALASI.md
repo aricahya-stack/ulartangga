@@ -22,7 +22,7 @@ Jalankan keempat file sesuai urutan; **jangan tempel semuanya menjadi satu query
 
 ### Membuat admin pertama
 
-1. Daftar dengan email melalui aplikasi yang telah terhubung dengan Supabase. Jika konfirmasi email aktif di Supabase, buka tautan konfirmasi terlebih dulu.
+1. Setelah keempat file SQL berhasil dijalankan, buka **Supabase Dashboard → Authentication → Users → Add user**, lalu buat akun pertama memakai email dan kata sandi Anda. Jika memilih mengirim undangan, selesaikan aktivasi dan atur kata sandi lewat email terlebih dahulu. Tidak ada pendaftaran mandiri di aplikasi.
 2. Di Supabase SQL Editor, lihat daftar akun:
 
 ```sql
@@ -37,7 +37,7 @@ update public.profiles set role = 'admin'
 where id = 'GANTI_DENGAN_UUID_AKUN_ANDA';
 ```
 
-4. Keluar lalu masuk lagi. Menu Admin tersedia. Jangan memakai email atau password dalam query pembaruan peran.
+4. Masuk ke aplikasi dengan email dan kata sandi akun tadi. Menu Admin tersedia. Jangan memakai email atau password dalam query pembaruan peran. Admin kemudian dapat membuat akun guru dan siswa melalui dashboard.
 
 ## 2. Hubungkan ke Vercel
 
@@ -70,7 +70,7 @@ Untuk lokal: salin `.env.example` menjadi `.env`, isi nilainya, `npm install`, `
 
 ## 3. Alur penggunaan
 
-1. Situs langsung membuka halaman login/daftar. Siswa harus masuk terlebih dahulu sebelum bermain. Jika variabel Supabase belum siap, halaman login menjelaskan konfigurasinya dan tidak membuka permainan sebagai tamu. Guru dan admin dapat dibuat dari dashboard Admin setelah akun admin pertama disiapkan.
+1. Situs langsung membuka halaman login tanpa menu daftar. Siswa harus masuk terlebih dahulu sebelum bermain. Jika variabel Supabase belum siap, halaman login menjelaskan konfigurasinya dan tidak membuka permainan sebagai tamu. Akun baru dibuat oleh admin dari dashboard Admin setelah akun admin pertama disiapkan di Supabase.
 2. Admin membuat akun guru/siswa, membuat kelas, memilih guru, kemudian memasukkan siswa ke kelas. Admin dapat mengatur ulang kata sandi akun melalui dashboard; pengguna dapat meminta tautan pemulihan dari halaman login. Guru/admin dapat mengedit soal Bahasa Arab satu per satu di dashboard; format kunci mengikuti JSON (`0`, `true`, `[0,2]`, indeks mulai dari nol). Perubahan bank berlaku global pada permainan baru. Hindari mengedit soal saat ada pertandingan online berlangsung.
 3. **Main lokal:** dua pion pada satu perangkat; hanya hasil pion A yang dihubungkan ke akun login.
 4. **Main online:** pemain A membuat ruang dan membagikan kode 8 karakter; pemain B login di perangkat lain dan memasukkan kode. Pertandingan dimulai otomatis pada kedua perangkat; masing-masing mengendalikan pionnya. Dadu dan urutan giliran dikirim melalui Supabase; jawaban lawan disalin ke papan perangkat lain. Pertahankan kedua tab terbuka sampai permainan selesai.
